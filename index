@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Magic Ball</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <h1>Make a wish and think about it....</h1>
+
+    <button id="luck">Ask a Ball</button>
+
+
+    <div id="yourLuck"> </div>
+
+
+
+    <script>
+        var luck = document.getElementById("luck");
+
+
+
+        function shuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+
+            //creat array
+            var arr = [
+"It is certain",
+"It is decidedly so",
+"Without a doubt",
+"Yes, definitely",
+"You may rely on it",
+"As I see it, yes",
+"Most likely",
+"Outlook good",
+"Yes",
+"Signs point to yes",
+"Reply hazy try again",
+"Ask again later",
+"Better not tell you now",
+"Cannot predict now",
+"Concentrate and ask again",
+"Don't count on it",
+"My reply is no",
+"My sources say no", ",
+"Outlook not so good
+"Very doubtful"];
+
+            luck.onclick = function () {
+                arr = shuffle(arr);
+            }
+            console.log(arr);
+
+            document.getElementById("yourLuck").innerHTML += name + " Ball says:  " + arr + "<br/>";
+        }
+    </script>
+</body>
+</html
