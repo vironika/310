@@ -17,21 +17,7 @@
 
 
     <script>
-    //in class exersise
-         var name = prompt("what is your name?");
-       function updateMessage(messageName){
-            var message = document.getElementById('message');
-            message.innerHTML = "We're so happy you're here," + messageName + "!";
-        }
-        
-        alert('Into JavaScript');
-        updateMessage(name); 
-        
-   
-        
-        
-    
-   //end   //in class exersise 
+  
     
         var luck = document.getElementById("luck");
 
@@ -79,13 +65,16 @@
 "Outlook not so good
 "Very doubtful"];
 
-            luck.onclick = function () {
-                arr = shuffle(arr);
-            }
-            console.log(arr);
+         
+        
+        
+        
+        document.getElementById('yourLuck').onclick = function () {
+        arr = shuffle(arr);
+var arr = arr[Math.floor(Math.random() * answers.length)];
+    document.getElementById('message').innerHTML = arr;
+};
 
-            document.getElementById("yourLuck").innerHTML += name + " Ball says:  " + arr + "<br/>";
-        }
     </script>
 </body>
 </html
