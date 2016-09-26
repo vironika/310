@@ -18,12 +18,18 @@
 
     <script>
     //in class exersise
-       function updateMessage(){
+         var name = prompt=("what is your name?");
+       function updateMessage(messageName){
             var message = document.getElementById('message');
-            message.innerHTML = "We're so happy you're here!";
+            message.innerHTML = "We're so happy you're here," + messageName + "!";
         }
         
-        alert('Into JavaScript'); 
+        alert('Into JavaScript');
+        updateMessage(name); 
+        
+   
+        
+        
     
    //end   //in class exersise 
     
