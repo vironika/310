@@ -18,7 +18,7 @@
 
     <script>
     //in class exersise
-         var name = prompt=("what is your name?");
+         var name = prompt("what is your name?");
        function updateMessage(messageName){
             var message = document.getElementById('message');
             message.innerHTML = "We're so happy you're here," + messageName + "!";
