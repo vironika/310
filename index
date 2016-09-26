@@ -8,7 +8,7 @@
 
 <body>
     <h1>Make a wish and think about it....</h1>
-
+  <div id="message">Welcome to this beautiful site!</div>   
     <button id="luck">Ask a Ball</button>
 
 
@@ -17,6 +17,16 @@
 
 
     <script>
+    //in class exersise
+       function updateMessage(){
+            var message = document.getElementById('message');
+            message.innerHTML = "We're so happy you're here!";
+        }
+        
+        alert('Into JavaScript'); 
+    
+   //end   //in class exersise 
+    
         var luck = document.getElementById("luck");
 
 
