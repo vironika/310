@@ -8,7 +8,7 @@
 
 <body>
     <h1>Make a wish and think about it....</h1>
-
+  <div id="message">Welcome to this beautiful site!</div>   
     <button id="luck">Ask a Ball</button>
 
 
@@ -17,6 +17,8 @@
 
 
     <script>
+  
+    
         var luck = document.getElementById("luck");
 
 
@@ -63,13 +65,16 @@
 "Outlook not so good
 "Very doubtful"];
 
-            luck.onclick = function () {
-                arr = shuffle(arr);
-            }
-            console.log(arr);
+         
+        
+        
+        
+        document.getElementById('yourLuck').onclick = function () {
+        arr = shuffle(arr);
+var arr = arr[Math.floor(Math.random() * answers.length)];
+    document.getElementById('message').innerHTML = arr;
+};
 
-            document.getElementById("yourLuck").innerHTML += name + " Ball says:  " + arr + "<br/>";
-        }
     </script>
 </body>
 </html
