@@ -24,6 +24,6 @@ document.getElementById('submit').onclick = function () {
          }
     document.getElementById('message').innerHTML =text;
 
-
+location.href = "#message";
 };
 
