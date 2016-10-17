@@ -3,6 +3,30 @@ var time = [
 var wish = [];//holds wishes inputes
 var text = "";
 
+
+alert("Make a wish!");
+
+alert("Did you make a wish!");
+alert("Make a wish!");
+alert("Make a wish!");
+
+document.getElementById("myForm").onmouseover = function() {mouseOver()};
+document.getElementById("myForm").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+    document.getElementById("myForm").style.visibility = "hidden";
+}
+
+
+
+function mouseOut() {
+    
+    document.getElementById("myForm").style.visibility = "visible";
+}
+
+setTimeout(mouseOut, 1000);
+
+
 //function on click
 document.getElementById('submit').onclick = function () {
 
@@ -17,11 +41,14 @@ document.getElementById('submit').onclick = function () {
             }
     //loop the massege to repit 5 times
      for(i=0; i<wish.length; i++){
+         alert("You really dont want anything???? HA ha ha.... ");
          //creats rundom number from 2 to 12
-      var num = Math.floor((Math.random() * 11) + 2);
-         var timeArr = time[Math.floor(Math.random() * time.length)];
-           text +=  "Will get " + wish[i] +" in " + num + timeArr + "<br>";
+     
+       
+          
          }
+    
+   text += "You really dont want anything???? HA ha ha.... ";
     document.getElementById('message').innerHTML =text;
 
 location.href = "#message";
